@@ -25,7 +25,8 @@ local function fetch_url(url, target_key)
 end
 
 local function print_joke()
-        local url = "https://api.chucknorris.io/jokes/random"
+        -- local url = "https://api.chucknorris.io/jokes/random"
+        local url = "https://api.chucknorris.io/jokes/random?category={dev}"
         local key_to_get = "value"
 
         local joke = (fetch_url(url, key_to_get))
