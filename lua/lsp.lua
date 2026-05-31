@@ -24,4 +24,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
 })
 
-vim.lsp.enable({ "ty" })
+local lsp_enabled = true
+
+if lsp_enabled == true then
+        vim.lsp.enable({ "clangd" })
+        vim.lsp.enable({ "intelephense" })
+        vim.lsp.enable({ "lua_ls" })
+        vim.lsp.enable({ "rust_analyzer" })
+        vim.lsp.enable({ "ty" })
+        vim.lsp.enable({ "zls" })
+end
